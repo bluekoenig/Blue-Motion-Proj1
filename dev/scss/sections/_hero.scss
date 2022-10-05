@@ -1,5 +1,5 @@
 #hero {
-    background-image: url("../img/hero.jpg");
+    background-image: url("../img/background.png");
     height: 80vh;
     background-size: cover;
     background-position: center bottom;
@@ -13,19 +13,15 @@
     }
 
     #overlay {
-        background-color: rgba(0, 0, 0, 0.5);
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-rows: 16px auto 16px;
+        grid-template-areas: 
+        ". t1 . t2 . t3 .";
         text-align: center;
 
-        section{
-
-        }
-
         h1 {
-            color: var(--white);
+            color: var(--dark-yellow);
             margin: 0;
             font-size: rem-calc(40);
 
@@ -33,30 +29,46 @@
                 font-size: rem-calc(90);
             }
 
-            span {
-                // color: rgba(255,255,255,0.25);
-                color: rgba(var(--whiteO), 0.25);
-            }
+        
         }
 
         button {
             border: none;
             background-color: var(--red);
             color: var(--white);
-            padding: 30px 40px;
-            border-radius: 8px;
-            margin-top: 24px;
+            padding: 50px 20% 50px 20%;
+            border-radius: 15px;
+            margin-top: 124px;
             font-size: rem-calc(20);
             cursor: pointer;
 
             @include md {
-                padding: 30px 50px;
-                font-size: rem-calc(25);
+                padding: 30px 20% 30px 20%;
+                font-size: rem-calc(35);
             }
 
-            i {
-                margin-left: 8px;
+            @include sm{
+                font-size: rem-calc(40);
             }
+
+        }
+
+        .fish-logo{
+            max-width: 30%;
+            display: flex;
+            justify-content: flex-end;
         }
     }
+}
+
+.t1{
+    grid-area: t1;
+}
+
+.t2{
+    grid-area: t2;
+}
+
+.t3{
+    grid-area: t3;
 }
