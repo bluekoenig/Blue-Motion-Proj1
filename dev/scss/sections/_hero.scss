@@ -21,6 +21,13 @@
     ". t1 ."
     ". t2 ."
     ". t3 .";
+
+    @include lg{
+        grid-template-areas:
+        ". t1 ."
+        "t2 t2 t2"
+        ". t3 ."; 
+    }
 }
        
 
@@ -30,7 +37,11 @@
             font-size: rem-calc(40);
 
             @include md {
-                font-size: rem-calc(90);
+                font-size: rem-calc(60);
+            }
+
+            @include lg {
+                font-size: rem-calc(75);
             }
 
         
@@ -40,18 +51,19 @@
             border: none;
             background-color: var(--red);
             color: var(--white);
-            padding: 35px 150px 35px 150px;
+            padding: 35px 50px 35px 50px;
             border-radius: 15px;
             margin-top: 100px;
             font-size: rem-calc(20);
             cursor: pointer;
+            display: flex;
 
             @include md {
                 font-size: rem-calc(35);
                 
             }
 
-            @include sm{
+            @include lg{
                 font-size: rem-calc(40);
             }
 
@@ -62,9 +74,20 @@ padding-left: 20px;
         }
 
         .fish-logo{
-            max-width: 70%;
+            display: flex;
+            max-width: 100%;
             display: flex;
             justify-content: flex;
+
+            @include md{
+                max-width: 70%;
+            }
+
+            @include md{
+                max-width: 60%;
+                margin-bottom: 42px;
+                padding-left: 75px;
+            }
         }
     }
 
@@ -72,7 +95,7 @@ padding-left: 20px;
         grid-area: t1;
         align-self: center;
         justify-self: center;
-        padding-left: 150px;
+        padding-left: 25px;
       }
 
       .words {
