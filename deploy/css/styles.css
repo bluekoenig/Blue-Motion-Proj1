@@ -418,55 +418,63 @@ textarea {
 #hero #overlay {
   height: 100%;
   display: grid;
-  grid-template-rows: 16px auto 16px;
-  grid-template-areas: ". t1 . t2 . t3 .";
-  text-align: center;
+  grid-template-columns: 30% auto 30%;
+  grid-auto-rows: 200px;
+  grid-template-areas: ". t1 ." ". t2 ." ". t3 .";
 }
-#hero #overlay h1 {
+#hero h1 {
   color: var(--dark-yellow);
   margin: 0;
   font-size: 2.5rem;
 }
 @media (min-width: 768px) {
-  #hero #overlay h1 {
+  #hero h1 {
     font-size: 5.625rem;
   }
 }
-#hero #overlay button {
+#hero button {
   border: none;
   background-color: var(--red);
   color: var(--white);
-  padding: 50px 20% 50px 20%;
+  padding: 16px 75% 16px 75%;
   border-radius: 15px;
   margin-top: 124px;
   font-size: 1.25rem;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  #hero #overlay button {
+  #hero button {
     padding: 30px 20% 30px 20%;
     font-size: 2.1875rem;
   }
 }
 @media (min-width: 576px) {
-  #hero #overlay button {
+  #hero button {
     font-size: 2.5rem;
   }
 }
-#hero #overlay .fish-logo {
+#hero .fish-logo {
   max-width: 30%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex;
 }
 
-.t1 {
+.fish {
   grid-area: t1;
+  align-self: center;
+  justify-self: center;
+  padding-left: 300px;
 }
 
-.t2 {
+.words {
   grid-area: t2;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
 }
 
-.t3 {
+.ass {
   grid-area: t3;
+  align-self: center;
+  justify-self: center;
 }

@@ -13,12 +13,16 @@
     }
 
     #overlay {
-        height: 100%;
-        display: grid;
-        grid-template-rows: 16px auto 16px;
-        grid-template-areas: 
-        ". t1 . t2 . t3 .";
-        text-align: center;
+            height: 100%;
+            display: grid;
+  grid-template-columns: 30% auto 30%;
+  grid-auto-rows: 200px;
+  grid-template-areas:
+    ". t1 ."
+    ". t2 ."
+    ". t3 .";
+}
+       
 
         h1 {
             color: var(--dark-yellow);
@@ -36,7 +40,7 @@
             border: none;
             background-color: var(--red);
             color: var(--white);
-            padding: 50px 20% 50px 20%;
+            padding: 16px 75% 16px 75%;
             border-radius: 15px;
             margin-top: 124px;
             font-size: rem-calc(20);
@@ -56,19 +60,26 @@
         .fish-logo{
             max-width: 30%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex;
         }
     }
-}
 
-.t1{
-    grid-area: t1;
-}
+    .fish {
+        grid-area: t1;
+        align-self: center;
+        justify-self: center;
+        padding-left: 300px;
+      }
 
-.t2{
-    grid-area: t2;
-}
+      .words {
+        grid-area: t2;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+      }
 
-.t3{
-    grid-area: t3;
-}
+      .ass {
+        grid-area: t3;
+        align-self: center;
+        justify-self: center;
+      }
